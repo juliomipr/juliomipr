@@ -1,29 +1,5 @@
 import 'package:flutter/material.dart';
 
-class MattMurdock extends StatelessWidget {
-  const MattMurdock({
-    Key? key,
-    required this.title,
-    required this.appBarTitle,
-    required this.color,
-  }) : super(key: key);
-  final String title;
-  final String appBarTitle;
-  final MaterialColor color;
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        primarySwatch: color,
-      ),
-      home: MyHomePage(title: appBarTitle),
-    );
-  }
-}
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
