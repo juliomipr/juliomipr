@@ -8,12 +8,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:matt_murdock/main.dart';
+import 'package:matt_murdock/app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const MattMurdock(
+      appBarTitle: '',
+      color: Colors.amber,
+      title: '',
+    ));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
