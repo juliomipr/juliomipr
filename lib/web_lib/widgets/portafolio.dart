@@ -55,7 +55,7 @@ class _DesktopContent4State extends ConsumerState<DesktopContent4> {
                 style: customTextStyle.headlineStyle,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30.0,
             ),
             Center(
@@ -64,7 +64,7 @@ class _DesktopContent4State extends ConsumerState<DesktopContent4> {
                 children: [
                   CustomCard(
                     'assets/image/foodie.png',
-                    align: Alignment(0.2, 0.0),
+                    align: const Alignment(0.2, 0.0),
                     number: '01',
                     heightCard: 700.0,
                     name: 'Foodie',
@@ -115,7 +115,7 @@ class _DesktopContent4State extends ConsumerState<DesktopContent4> {
                   ),
                   CustomCard(
                     'assets/image/grocery.png',
-                    align: Alignment(-0.1, 0.0),
+                    align: const Alignment(-0.1, 0.0),
                     number: '02',
                     name: 'Grocery',
                     heightCard: 700.0,
@@ -166,7 +166,7 @@ class _DesktopContent4State extends ConsumerState<DesktopContent4> {
                   ),
                   CustomCard(
                     'assets/image/crypto.png',
-                    align: Alignment(-0.1, 0.0),
+                    align: const Alignment(-0.1, 0.0),
                     number: '03',
                     name: 'Crypto',
                     heightCard: 700.0,
@@ -217,7 +217,7 @@ class _DesktopContent4State extends ConsumerState<DesktopContent4> {
                   ),
                   CustomCard(
                     'assets/image/recipes.png',
-                    align: Alignment(0.0, 0.0),
+                    align: const Alignment(0.0, 0.0),
                     number: '04',
                     name: 'Recipes',
                     heightCard: 700.0,

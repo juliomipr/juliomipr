@@ -32,7 +32,7 @@ class _Landing extends State<Landing> {
           child: PageWrapper(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 MainMenuNavigationBar(),
                 HeroSection(),
                 DesktopContent4(

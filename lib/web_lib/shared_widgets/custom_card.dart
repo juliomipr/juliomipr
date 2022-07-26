@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -93,11 +95,11 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                   ),
                 ),
                 curve: Curves.ease,
-                duration: Duration(milliseconds: 275),
+                duration: const Duration(milliseconds: 275),
                 height: widget.heightCard,
                 width: (ref.watch(widthProvider) *
                     widget
-                        .factor), //TODO: Evualuate width, previous logic (MediaQuery.of(context).size.width * widget.factor)
+                        .factor), 
                 child: Image.asset(
                   widget.image,
                   fit: BoxFit.cover,
@@ -111,9 +113,9 @@ class _CustomCardState extends ConsumerState<CustomCard> {
               child: AnimatedOpacity(
                 opacity:
                     (widget.factor == 0.7 || widget.factor == 0.1) ? 0.0 : 1.0,
-                duration: Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 200),
                 child: AnimatedContainer(
-                  duration: Duration(milliseconds: 200),
+                  duration: const Duration(milliseconds: 200),
                   height: (widget.factor == 0.7 || widget.factor == 0.1)
                       ? 0.0
                       : 40.0,
@@ -139,10 +141,10 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                       height: MediaQuery.of(context).size.height -
                           widget.name.length * 5.0,
                       width: 1.5,
-                      alignment: Alignment(0.0, -1.0),
+                      alignment: const Alignment(0.0, -1.0),
                       child: AnimatedContainer(
                         curve: Curves.easeOut,
-                        duration: Duration(milliseconds: 375),
+                        duration: const Duration(milliseconds: 375),
                         height: (widget.factor == 0.28 ||
                                 widget.factor == 0.1 ||
                                 widget.factor == 0.7)
@@ -157,14 +159,14 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                     ),
 
                     AnimatedOpacity(
-                      duration: Duration(milliseconds: 450),
+                      duration: const Duration(milliseconds: 450),
                       opacity: (widget.factor == 0.28 ||
                               widget.factor == 0.1 ||
                               widget.factor == 0.7)
                           ? 1.0
                           : 0.0,
                       child: AnimatedContainer(
-                        duration: Duration(milliseconds: 450),
+                        duration: const Duration(milliseconds: 450),
                         height: (widget.factor == 0.28 ||
                                 widget.factor == 0.1 ||
                                 widget.factor == 0.7)
@@ -186,7 +188,7 @@ class _CustomCardState extends ConsumerState<CustomCard> {
             ),
             AnimatedPositioned(
               curve: Curves.easeOut,
-              duration: Duration(milliseconds: 375),
+              duration: const Duration(milliseconds: 375),
               top: (widget.factor == 0.7)
                   ? MediaQuery.of(context).size.height * 0.35
                   : MediaQuery.of(context).size.height -
@@ -194,7 +196,7 @@ class _CustomCardState extends ConsumerState<CustomCard> {
               right: 5.0,
               child: AnimatedOpacity(
                 opacity: (widget.factor == 0.7) ? 1.0 : 0.0,
-                duration: Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 200),
                 child: Container(
                   height: 40.0,
                   width: 40.0,
@@ -203,13 +205,13 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: IconButton(
-                      icon: Icon(Icons.play_arrow), onPressed: () {}),
+                      icon: const Icon(Icons.play_arrow), onPressed: () {}),
                 ),
               ),
             ),
             AnimatedPositioned(
               left: (widget.factor == 0.7) ? 0.0 : -300.0,
-              duration: Duration(milliseconds: 475),
+              duration: const Duration(milliseconds: 475),
               child: Container(
                 height: MediaQuery.of(context).size.height,
                 width: 300.0,
@@ -223,34 +225,34 @@ class _CustomCardState extends ConsumerState<CustomCard> {
             ),
             AnimatedPositioned(
               left: (widget.factor == 0.7) ? 10.0 : -300.0,
-              duration: Duration(milliseconds: 475),
+              duration: const Duration(milliseconds: 475),
               child: AnimatedOpacity(
                 opacity: (widget.factor == 0.7) ? 1.0 : 0.0,
-                duration: Duration(milliseconds: 475),
+                duration: const Duration(milliseconds: 475),
                 child: SizedBox(
                   height: 350.0,
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 50.0,
                         ),
                         Text(
                           widget.name,
                           style: customTextStyle.titleStyle,
                         ),
-                        SizedBox(height: 10.0),
+                        const SizedBox(height: 10.0),
                         Text(
                            widget.subTitle,
                           style: customTextStyle.subtitleStyle.copyWith(
                             backgroundColor: Colors.transparent,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30.0,
                         ),
                       ],
@@ -263,11 +265,11 @@ class _CustomCardState extends ConsumerState<CustomCard> {
               right: 35.0,
               top: 0.0,
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 250),
+                duration: const Duration(milliseconds: 250),
                 height: widget.factor == 0.7 ? 30.0 : 0.0,
                 width: widget.factor == 0.7 ? 50.0 : 0.0,
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.close,
                     size: 40.0,
                     color: Colors.white,
