@@ -1,5 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:matt_murdock/mobile/ui/home/home_page.dart';
+
+import 'ui/home/home_page.dart';
+import 'web_lib/home/home_landing.dart';
 
 class MattMurdock extends StatelessWidget {
   const MattMurdock({
@@ -20,7 +23,7 @@ class MattMurdock extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: color,
       ),
-      home: MyHomePage(title: appBarTitle),
+      home:  kIsWeb ? const Landing() : MyHomePage(title: appBarTitle),
     );
   }
 }
