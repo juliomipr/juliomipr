@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:matt_murdock/utils/custom_text_style.dart';
 
-class HeroSection extends StatelessWidget {
-  const HeroSection({Key? key}) : super(key: key);
+class DesktopHeroSection extends StatelessWidget {
+  const DesktopHeroSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -48,12 +48,12 @@ class _CustomCardState extends ConsumerState<CustomCard> {
     final customTextStyle = CustomTextStyle.of(context);
 
     widthProvider = Provider<double>((ref) {
-      if (MediaQuery.of(context).size.width < tableWidth) {
+      if (MediaQuery.of(context).size.width < tabletMaxWidth) {
         final widht = MediaQuery.of(context).size.width;
         return widht;
       }
 
-      return tableWidth;
+      return tabletMaxWidth;
     });
 
     return MouseRegion(
@@ -97,9 +97,7 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                 curve: Curves.ease,
                 duration: const Duration(milliseconds: 275),
                 height: widget.heightCard,
-                width: (ref.watch(widthProvider) *
-                    widget
-                        .factor), 
+                width: (ref.watch(widthProvider) * widget.factor),
                 child: Image.asset(
                   widget.image,
                   fit: BoxFit.cover,
@@ -120,10 +118,8 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                       ? 0.0
                       : 40.0,
                   width: 80.0,
-                  child: Text(
-                    widget.number,
-                    style: customTextStyle.headlineStyle
-                  ),
+                  child:
+                      Text(widget.number, style: customTextStyle.headlineStyle),
                 ),
               ),
             ),
@@ -176,7 +172,7 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                         child: Transform.rotate(
                           angle: -pi / 2,
                           child: Text(
-                             widget.name,
+                            widget.name,
                             style: customTextStyle.titleStyle,
                           ),
                         ),
@@ -216,7 +212,7 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                 height: MediaQuery.of(context).size.height,
                 width: 300.0,
                 decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors:  [
+                  gradient: LinearGradient(colors: [
                     Colors.black54,
                     Colors.transparent,
                   ]),
@@ -247,7 +243,7 @@ class _CustomCardState extends ConsumerState<CustomCard> {
                         ),
                         const SizedBox(height: 10.0),
                         Text(
-                           widget.subTitle,
+                          widget.subTitle,
                           style: customTextStyle.subtitleStyle.copyWith(
                             backgroundColor: Colors.transparent,
                           ),

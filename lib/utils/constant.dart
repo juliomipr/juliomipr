@@ -1,2 +1,2 @@
-const mobileWidth = 900.00;
-const tableWidth = 1200.00;
+const double mobileMaxWidth = 900.00;
+const double tabletMaxWidth = 1201.00;

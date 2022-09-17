@@ -1,23 +1,24 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:matt_murdock/utils/colors_utils.dart';
 import 'package:matt_murdock/utils/custom_app_theme.dart';
 import 'package:matt_murdock/utils/custom_text_style.dart';
 
-class MainMenuNavigationBar extends StatefulWidget {
-  const MainMenuNavigationBar({Key? key}) : super(key: key);
+class DesktopMainMenuNavigationBar extends StatefulWidget {
+  const DesktopMainMenuNavigationBar({Key? key}) : super(key: key);
 
   @override
-  State<MainMenuNavigationBar> createState() => _MainMenuNavigationBar();
+  State<DesktopMainMenuNavigationBar> createState() => _MainMenuNavigationBar();
 }
 
-class _MainMenuNavigationBar extends State<MainMenuNavigationBar> {
+class _MainMenuNavigationBar extends State<DesktopMainMenuNavigationBar> {
   Color color = ColorUtils.text_100;
 
   @override
   Widget build(BuildContext context) {
-    final customAppTheme = CustomAppTheme.of(context);
-    final customTextStyle = CustomTextStyle.of(context);
+    final theme = CustomAppTheme.of(context);
+    final textStyle = CustomTextStyle.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
       child: Row(
@@ -28,7 +29,7 @@ class _MainMenuNavigationBar extends State<MainMenuNavigationBar> {
             'assets/navigation_bar/logo.svg',
             height: 24,
             width: 24,
-            color: customAppTheme.defaultColorTheme,
+            color: theme.defaultColorTheme,
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,19 +37,19 @@ class _MainMenuNavigationBar extends State<MainMenuNavigationBar> {
               MouseRegion(
                 onHover: (event) {
                   setState(() {
-                    color = customAppTheme.defaultColorTheme;
+                    color = theme.defaultColorTheme;
                   });
                 },
                 onExit: (event) {
                   setState(() {
-                    color = customAppTheme.defaultTextTheme;
+                    color = theme.defaultTextTheme;
                   });
                 },
                 child: InkWell(
                   child: Text(
                     'About me',
                     style:
-                        customTextStyle.textButtonStyle.copyWith(color: color),
+                        textStyle.textButtonStyle.copyWith(color: color),
                   ),
                 ),
               ),
@@ -59,7 +60,7 @@ class _MainMenuNavigationBar extends State<MainMenuNavigationBar> {
                 'assets/socials/linkedin.png',
                 height: 20,
                 width: 20,
-                color: customAppTheme.defaultColorTheme,
+                color: theme.defaultColorTheme,
               ),
               const SizedBox(
                 width: 24,
@@ -68,7 +69,7 @@ class _MainMenuNavigationBar extends State<MainMenuNavigationBar> {
                 'assets/socials/whatsapp.png',
                 height: 20,
                 width: 20,
-                color: customAppTheme.defaultColorTheme,
+                color: theme.defaultColorTheme,
               ),
               const SizedBox(
                 width: 24,
@@ -77,7 +78,7 @@ class _MainMenuNavigationBar extends State<MainMenuNavigationBar> {
                 'assets/socials/github.png',
                 height: 20,
                 width: 20,
-                color: customAppTheme.defaultColorTheme,
+                color: theme.defaultColorTheme,
               ),
             ],
           ),

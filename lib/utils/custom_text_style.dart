@@ -16,7 +16,7 @@ class CustomTextStyle {
   });
 
   factory CustomTextStyle.of(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width > mobileWidth;
+    final isMobile = MediaQuery.of(context).size.width > mobileMaxWidth;
     final customAppTheme = CustomAppTheme.of(context);
     final defaultButtonMobileTextStyle = TextStyle(
       color: customAppTheme.defaultTextTheme,
@@ -28,26 +28,39 @@ class CustomTextStyle {
       fontFamily: CustomFontFamily.gothic.name,
       fontSize: 16,
     );
-    final defaultHeadlineMobileStyle = TextStyle(color: customAppTheme.defaultTextTheme, fontSize: 26, fontFamily: CustomFontFamily.gothic.name);
-    final defaultHeadlineDesktopStyle = TextStyle(color: customAppTheme.defaultTextTheme, fontSize: 24, fontFamily: CustomFontFamily.gothic.name);
+    final defaultHeadlineMobileStyle = TextStyle(
+        color: customAppTheme.defaultTextTheme,
+        fontSize: 26,
+        fontFamily: CustomFontFamily.gothic.name);
+    final defaultHeadlineDesktopStyle = TextStyle(
+        color: customAppTheme.defaultTextTheme,
+        fontSize: 24,
+        fontFamily: CustomFontFamily.gothic.name);
     final defaultTitleMobileStyle = TextStyle(
-            color: customAppTheme.defaultTextTheme, fontSize: 18, fontFamily: CustomFontFamily.gothic.name
-          );
+        color: customAppTheme.defaultTextTheme,
+        fontSize: 18,
+        fontFamily: CustomFontFamily.gothic.name);
     final defaultTitleDesktopStyle = TextStyle(
-            color: customAppTheme.defaultTextTheme, fontSize: 16, fontFamily: CustomFontFamily.gothic.name
-          );
+        color: customAppTheme.defaultTextTheme,
+        fontSize: 16,
+        fontFamily: CustomFontFamily.gothic.name);
     final defaultSubtitleMobileStyle = TextStyle(
-            color: customAppTheme.defaultTextTheme, fontSize: 12, fontFamily: CustomFontFamily.gothic.name
-          );
+        color: customAppTheme.defaultTextTheme,
+        fontSize: 12,
+        fontFamily: CustomFontFamily.gothic.name);
     final defaultSubtitleDesktopStyle = TextStyle(
-            color: customAppTheme.defaultTextTheme, fontSize: 14, fontFamily: CustomFontFamily.gothic.name
-    );
+        color: customAppTheme.defaultTextTheme,
+        fontSize: 14,
+        fontFamily: CustomFontFamily.gothic.name);
     return CustomTextStyle(
-      textButtonStyle:
-          isMobile ? defaultButtonMobileTextStyle : defaultButtonDesktopTextStyle,
-          headlineStyle: isMobile ? defaultHeadlineMobileStyle : defaultHeadlineDesktopStyle, 
-          titleStyle: isMobile ? defaultTitleMobileStyle : defaultTitleDesktopStyle,
-          subtitleStyle: isMobile ? defaultSubtitleMobileStyle : defaultSubtitleDesktopStyle,
+      textButtonStyle: isMobile
+          ? defaultButtonMobileTextStyle
+          : defaultButtonDesktopTextStyle,
+      headlineStyle:
+          isMobile ? defaultHeadlineMobileStyle : defaultHeadlineDesktopStyle,
+      titleStyle: isMobile ? defaultTitleMobileStyle : defaultTitleDesktopStyle,
+      subtitleStyle:
+          isMobile ? defaultSubtitleMobileStyle : defaultSubtitleDesktopStyle,
     );
   }
 }
