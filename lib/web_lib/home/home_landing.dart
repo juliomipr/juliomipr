@@ -7,7 +7,7 @@ import 'package:matt_murdock/web_lib/widgets/hero_section/hero_section.dart';
 import 'package:matt_murdock/web_lib/widgets/navigation/devices/mobile/navigation_widget.dart';
 import 'package:matt_murdock/web_lib/widgets/navigation/navigation_widget.dart';
 import 'package:matt_murdock/web_lib/shared_widgets/page_wrapper.dart';
-import 'package:matt_murdock/web_lib/widgets/portafolio.dart';
+import 'package:matt_murdock/web_lib/widgets/portafolio/portafolio.dart';
 
 class Landing extends StatefulWidget {
   const Landing({Key? key}) : super(key: key);
@@ -41,9 +41,7 @@ class _Landing extends State<Landing> {
                 children: const [
                   MobileMainMenuNavigationBar(),
                   HeroWidget(),
-                  // DesktopContent4(
-                  //   title: '',
-                  // )
+                  DesktopContent4()
                 ],
               ),
             ),

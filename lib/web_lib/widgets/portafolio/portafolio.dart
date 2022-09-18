@@ -9,9 +9,8 @@ double inActiveFactor = 0.24;
 bool pressed = false;
 
 class DesktopContent4 extends ConsumerStatefulWidget {
-  final String title;
 
-  const DesktopContent4({Key? key, required this.title}) : super(key: key);
+  const DesktopContent4({Key? key}) : super(key: key);
 
   @override
   ConsumerState<DesktopContent4> createState() => _DesktopContent4State();
