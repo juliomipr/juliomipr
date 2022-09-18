@@ -16,7 +16,7 @@ class DesktopHeroSection extends StatelessWidget {
           ),
           child: Row(
             children: [
-              SizedBox(
+              SizedBox  (
                 width: width * 0.3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

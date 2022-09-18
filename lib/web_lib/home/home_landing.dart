@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:matt_murdock/utils/colors_utils.dart';
-import 'package:matt_murdock/utils/constant.dart';
 import 'package:matt_murdock/utils/custom_app_theme.dart';
-import 'package:matt_murdock/web_lib/widgets/hero_section/devices/desktop/hero_section.dart';
+import 'package:matt_murdock/web_lib/widgets/expertise/expertise.dart';
 import 'package:matt_murdock/web_lib/widgets/hero_section/hero_section.dart';
 import 'package:matt_murdock/web_lib/widgets/navigation/devices/mobile/navigation_widget.dart';
-import 'package:matt_murdock/web_lib/widgets/navigation/navigation_widget.dart';
 import 'package:matt_murdock/web_lib/shared_widgets/page_wrapper.dart';
 import 'package:matt_murdock/web_lib/widgets/portafolio/portafolio.dart';
 
@@ -41,7 +39,8 @@ class _Landing extends State<Landing> {
                 children: const [
                   MobileMainMenuNavigationBar(),
                   HeroWidget(),
-                  DesktopContent4()
+                  ExpertiseWidget(),
+                  PortafolioWidget(),
                 ],
               ),
             ),
